@@ -9,7 +9,7 @@ const corsOptions = {
 };
 const port = 5000;
 app.use(cors(corsOptions));
-const apiKey = process.env.API_KEY || "72njgfa948d9aS7gs5";
+const apiKey = "72njgfa948d9aS7gs5";
 app.get("/api/task/products/search", async (req, res) => {
   const { search, page } = req.query;
   const url = `http://stageapi.monkcommerce.app/task/products/search?search=${search}&page=${page}&limit=10`;
