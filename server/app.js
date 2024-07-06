@@ -4,7 +4,7 @@ require("dotenv").config();
 const app = express();
 
 const corsOptions = {
-  origin: "https://monk-commerce-client.netlify.app/",
+  origin: "https://monk-commerce-client.netlify.app",
   optionsSuccessStatus: 200,
 };
 const port = 5000;
