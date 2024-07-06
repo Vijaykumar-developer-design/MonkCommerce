@@ -20,18 +20,10 @@ app.get("/api/task/products/search", async (req, res) => {
         "x-api-key": apiKey,
       },
     });
+
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error(
-        "Network response was not ok:",
-        response.statusText,
-        errorText
-      );
-      return res.status(response.status).json({ error: response.statusText });
+      throw new Error("Network response was not ok " + response.statusText);
     }
-    // if (!response.ok) {
-    //   throw new Error("Network response was not ok " + response.statusText);
-    // }
     const data = await response.json();
 
     res.json(data);
