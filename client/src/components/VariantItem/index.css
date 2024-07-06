@@ -1,0 +1,32 @@
+.variant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.variant-list {
+  margin-left: 20px;
+}
+.discount-input-variant {
+  border-radius: 20px;
+  width: 80px;
+}
+.selectelement {
+  border-radius: 10px;
+}
+
+button {
+  margin: 5px;
+}
+.variantes {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 8px;
+}
