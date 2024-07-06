@@ -21,8 +21,17 @@ app.get("/api/task/products/search", async (req, res) => {
       },
     });
     if (!response.ok) {
-      throw new Error("Network response was not ok " + response.statusText);
+      const errorText = await response.text();
+      console.error(
+        "Network response was not ok:",
+        response.statusText,
+        errorText
+      );
+      return res.status(response.status).json({ error: response.statusText });
     }
+    // if (!response.ok) {
+    //   throw new Error("Network response was not ok " + response.statusText);
+    // }
     const data = await response.json();
 
     res.json(data);
