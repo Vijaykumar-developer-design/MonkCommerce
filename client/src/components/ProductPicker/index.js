@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import "./index.css"; // Assuming you have styling for ProductPicker
-const serverUrl = "http://localhost:5000";
+const serverUrl = "https://monk-commerce-server.vercel.app";
 
 const ProductPicker = ({ isOpen, onClose, onSelectProduct }) => {
   const [products, setProducts] = useState([]);
